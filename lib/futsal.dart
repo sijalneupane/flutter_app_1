@@ -104,8 +104,7 @@ class FutsalBooking extends StatelessWidget {
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height - (65 + 56),
-              child: ListView.builder(shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+              child: ListView.builder(
                   padding: EdgeInsets.only(bottom: 40),
                   scrollDirection: Axis.vertical,
                   itemCount: futsalList.length,
