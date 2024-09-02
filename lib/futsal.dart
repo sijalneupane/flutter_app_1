@@ -128,7 +128,7 @@ class FutsalBooking extends StatelessWidget {
                       margin:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 35),
                       padding: EdgeInsets.only(
-                          top: 10, bottom: 10, left: 10, right: 10),
+                          top: 5, bottom: 10, left: 10, right: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -149,7 +149,7 @@ class FutsalBooking extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(futsalList[index].futsalName!),
-                                SizedBox(height: 5),
+                                SizedBox(height: 3),
                                 Container(
                                   width: 115,
                                   child: Text(
@@ -164,8 +164,10 @@ class FutsalBooking extends StatelessWidget {
                           ),
                           Column(
                             children: [
-                              SizedBox(height: 10),
-                              Text(futsalList[index].bookingPrice!.toString()),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 30,bottom: 2),
+                                child: Text("Rs ${futsalList[index].bookingPrice!.toString()}"),
+                              ),
                               SizedBox(
                                 height: 30,
                                 child: ElevatedButton(
