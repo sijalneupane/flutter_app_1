@@ -25,8 +25,7 @@ class _Test11State extends State<Test11> {
       body: Column(
         children: [
           Icon(Icons.person,color: Colors.green,)
-        ],
-        
+        ]
       ),
     );
   }
