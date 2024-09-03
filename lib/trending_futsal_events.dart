@@ -16,7 +16,7 @@ class TrendingFutsalEvents extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                children: [Text("Trending events"), Spacer(), Text("See all")],
+                children: [Text("Trending events"), Spacer(),Text("See all")],
               ),
               Expanded(
                 child: Padding(
