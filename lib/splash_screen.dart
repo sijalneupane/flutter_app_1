@@ -9,23 +9,52 @@ class Test11 extends StatefulWidget {
 }
 
 class _Test11State extends State<Test11> {
-
   @override
   void initState() {
-    
-    Future.delayed(Duration(seconds: 2),(){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>Instagram()));
+    Future.delayed(Duration(seconds: 1), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => Instagram()));
     });
 
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      backgroundColor: Colors.black,
+      body: Stack(
         children: [
-          Icon(Icons.person,color: Colors.green,)
-        ]
+          Center(
+            child: Image.asset(
+              'assets/images/instagram_logo.png',
+              fit: BoxFit.cover,
+              height: 100,
+              width: 100,
+            ),
+          ),
+          Positioned(
+            bottom: 95,
+            left: 0,
+            right: 0,
+            child: Column(
+              children: [
+                Text(
+                  "from",
+                  style: TextStyle(
+                      fontSize: 14,
+                      color: const Color.fromARGB(255, 133, 133, 133)),
+                ),
+                Image.asset(
+                  'assets/images/meta_inst.png',
+                  fit: BoxFit.cover,
+                  width: 100,
+                  height: 20,
+                )
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

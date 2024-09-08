@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_1/futsal.dart';
 import 'package:flutter_app_1/splash_screen.dart';
-import 'package:flutter_app_1/stackdemostory.dart';
-import 'package:flutter_app_1/trending_futsal_events.dart';
 
 void main() {
   runApp(const MyApp());
