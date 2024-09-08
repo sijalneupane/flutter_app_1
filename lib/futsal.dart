@@ -142,7 +142,7 @@ class FutsalBooking extends StatelessWidget {
                                         futsalList[index].futsalImage!),
                                     fit: BoxFit.cover)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
