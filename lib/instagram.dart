@@ -64,7 +64,7 @@ class Instagram extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(60.0),
+          preferredSize: const Size.fromHeight(60.0),
           child: AppBar(
             backgroundColor: Colors.black,
             title: Row(
