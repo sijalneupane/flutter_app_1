@@ -103,8 +103,9 @@ class FutsalBooking extends StatelessWidget {
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height - (65 + 56),
               child: ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
                   padding: EdgeInsets.only(bottom: 40),
                   scrollDirection: Axis.vertical,
                   itemCount: futsalList.length,
@@ -126,15 +127,15 @@ class FutsalBooking extends StatelessWidget {
                             )
                           ]),
                       margin:
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 35),
-                      padding: EdgeInsets.only(
+                          const EdgeInsets.symmetric(vertical: 15, horizontal: 35),
+                      padding: const EdgeInsets.only(
                           top: 5, bottom: 10, left: 10, right: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            height: 55,
-                            width: 65,
+                            height: 60,
+                            width: 70,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
                                 image: DecorationImage(
@@ -142,9 +143,7 @@ class FutsalBooking extends StatelessWidget {
                                         futsalList[index].futsalImage!),
                                     fit: BoxFit.cover)),
                           ),
-                          const SizedBox(
-                            width: 10,
-                          ),
+                          Spacer(),
                           Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
