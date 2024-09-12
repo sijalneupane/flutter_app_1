@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
@@ -50,7 +51,11 @@ class Login extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   "Login",
-                  style: TextStyle(fontSize: 20),
+                  // style: TextStyle(fontSize: 20,),
+                style: GoogleFonts.workSans(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold
+                ),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.purple[200],
