@@ -84,6 +84,21 @@ class Facebook extends StatelessWidget {
                 size:30,
               )
             ],
+          ),
+          Row(
+            children: [
+              CircleAvatar(
+                backgroundImage: NetworkImage("https://live.staticflickr.com/5252/5403292396_0804de9bcf_b.jpg"),
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    
+                  )
+                ),
+              )
+            ],
           )
         ],
       ),
