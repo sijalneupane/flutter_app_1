@@ -23,8 +23,8 @@ class Login extends StatelessWidget {
               ),
               TextFormField(
                 decoration: InputDecoration(
-                  border:
-                      OutlineInputBorder(borderRadius: BorderRadius.circular(18)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(18)),
                   labelText: "username or email",
                   prefixIcon: Icon(
                     Icons.person,
@@ -36,10 +36,10 @@ class Login extends StatelessWidget {
               ),
               TextFormField(
                 decoration: InputDecoration(
-                  border:
-                      OutlineInputBorder(borderRadius: BorderRadius.circular(18)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(18)),
                   labelText: "password",
-                  prefixIcon:Icon(Icons.lock_outline_rounded),
+                  prefixIcon: Icon(Icons.lock_outline_rounded),
                 ),
               ),
               SizedBox(
@@ -53,10 +53,8 @@ class Login extends StatelessWidget {
                   child: Text(
                     "Login",
                     // style: TextStyle(fontSize: 20,),
-                  style: GoogleFonts.workSans(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold
-                  ),
+                    style: GoogleFonts.workSans(
+                        fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.purple[300],
@@ -115,7 +113,6 @@ class Login extends StatelessWidget {
                       radius: 20,
                       backgroundImage: NetworkImage(
                           "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/x-social-media-round-icon.png")),
-                 
                 ],
               )
             ],
