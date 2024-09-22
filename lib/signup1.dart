@@ -77,7 +77,8 @@ class Signup1 extends StatelessWidget {
                   Container(
                     width: MediaQuery.of(context).size.width,
                     // margin: EdgeInsets.symmetric(horizontal: 20),
-                    child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         // crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           TextFormField(
@@ -124,6 +125,7 @@ class Signup1 extends StatelessWidget {
                                 labelStyle: TextStyle(color: Colors.black26),
                                 suffixIcon: Icon(Icons.visibility_off,
                                     color: Colors.black38)),
+                                    
                           ),
                         ]),
                   )
@@ -180,7 +182,7 @@ class Signup1 extends StatelessWidget {
                         ],
                       )),
                 ],
-              )
+              ),
             ],
           ),
         ),
