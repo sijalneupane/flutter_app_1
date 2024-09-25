@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_1/color_const.dart';
 import 'package:flutter_app_1/custom_elevatedbutton.dart';
 import 'package:flutter_app_1/custom_text.dart';
 import 'package:flutter_app_1/custom_textformfield.dart';
+import 'package:flutter_app_1/string_const.dart';
 
 class Login2 extends StatelessWidget {
   Login2({super.key});
@@ -13,6 +15,7 @@ class Login2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: apricot,
         leading: Icon(Icons.arrow_back),
       ),
       body: SingleChildScrollView(
@@ -21,7 +24,7 @@ class Login2 extends StatelessWidget {
           child: Column(
             children: [
               CustomTextformfield(
-                labelText: "Name",
+                labelText: userNameStr,
                 onChanged: (p0) {
                   name=p0;
                 },
@@ -32,7 +35,7 @@ class Login2 extends StatelessWidget {
                 },
               ),
               CustomTextformfield(
-                labelText: "Address",
+                labelText: addressStr,
                 onChanged: (p0) {
                   address:p0;
                 },
@@ -43,7 +46,7 @@ class Login2 extends StatelessWidget {
                 },
               ),
               CustomTextformfield(
-                labelText: "Contact Number",
+                labelText: contactStr,
                 onChanged: (p0) {
                   contactNumber=p0;
                 },
@@ -54,7 +57,7 @@ class Login2 extends StatelessWidget {
                 },
               ),
               CustomTextformfield(
-                labelText: "Password",
+                labelText: passwordStr,
                 onChanged: (p0) {
                   password=p0;
                 },
