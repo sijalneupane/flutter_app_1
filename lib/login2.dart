@@ -3,13 +3,13 @@ import 'package:flutter_app_1/color_const.dart';
 import 'package:flutter_app_1/custom_elevatedbutton.dart';
 import 'package:flutter_app_1/custom_text.dart';
 import 'package:flutter_app_1/custom_textformfield.dart';
-import 'package:flutter_app_1/string_const.dart';
 
 class Login2 extends StatelessWidget {
   Login2({super.key});
   String? name,address,password;
   String? contactNumber;
   final _formKey = GlobalKey<FormState>();
+  TextEditingController emailController=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class Login2 extends StatelessWidget {
           child: Column(
             children: [
               CustomTextformfield(
-                labelText: userNameStr,
+                labelText: "Name",
                 onChanged: (p0) {
                   name=p0;
                 },
@@ -46,7 +46,7 @@ class Login2 extends StatelessWidget {
                 },
               ),
               CustomTextformfield(
-                labelText: contactStr,
+                labelText: "Contact Number",
                 onChanged: (p0) {
                   contactNumber=p0;
                 },
@@ -57,7 +57,7 @@ class Login2 extends StatelessWidget {
                 },
               ),
               CustomTextformfield(
-                labelText: passwordStr,
+                labelText: "Password",
                 onChanged: (p0) {
                   password=p0;
                 },
@@ -70,6 +70,8 @@ class Login2 extends StatelessWidget {
               CustomElevatedbutton(child: CustomText(data: "Login",),
                 onPressed: () {
                   if(_formKey.currentState!.validate()){
+                    print(emailController.text);
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>FutsalBooking()));
                   }
                 },
               )
