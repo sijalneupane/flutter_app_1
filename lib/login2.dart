@@ -3,6 +3,8 @@ import 'package:flutter_app_1/color_const.dart';
 import 'package:flutter_app_1/custom_elevatedbutton.dart';
 import 'package:flutter_app_1/custom_text.dart';
 import 'package:flutter_app_1/custom_textformfield.dart';
+import 'package:flutter_app_1/futsal.dart';
+import 'package:flutter_app_1/string_const.dart';
 
 class Login2 extends StatelessWidget {
   Login2({super.key});
