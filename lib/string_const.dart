@@ -13,3 +13,4 @@ String passwordValidatorStr="Please enter password";
 String confirmPasswordValidatorStr="Please retype password";
 
 String likeTitleStr="Messenger";
+String loginButton="Login";
