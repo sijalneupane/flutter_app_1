@@ -6,8 +6,9 @@ class CustomTextformfield extends StatelessWidget {
   String? Function(String?)? validator;
   TextInputType? keyboardType;
   bool? obscureText;
+  Widget? suffixIcon;
   CustomTextformfield(
-      {super.key, this.labelText, this.onChanged, this.validator,this.keyboardType,this.obscureText});
+      {super.key, this.labelText, this.onChanged, this.validator,this.keyboardType,this.obscureText,this.suffixIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,7 @@ class CustomTextformfield extends StatelessWidget {
         validator: validator,
         autovalidateMode: AutovalidateMode.onUserInteraction,
         decoration: InputDecoration(
+          suffixIcon: suffixIcon ??= null,
             labelText: labelText,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(5))),
       ),
