@@ -30,8 +30,8 @@ class MyApp extends StatelessWidget {
         // home:FutsalBooking()
         // home: Signup1()
         // home: Login1(),
-        // home: Login2(),
-        home:Like(),
+        home: Login2(),
+        // home:Like(),
         );
   }
 }

@@ -26,13 +26,14 @@ class Login2 extends StatelessWidget {
           child: Column(
             children: [
               CustomTextformfield(
-                labelText: "Name",
+                keyboardType: TextInputType.name,
+                labelText: userNameStr,
                 onChanged: (p0) {
                   name=p0;
                 },
                 validator: (p0) {
                   if(p0!.isEmpty){
-                    return "Please enter name";
+                    return nameValidatorStr;
                   } return null;
                 },
               ),
@@ -43,29 +44,29 @@ class Login2 extends StatelessWidget {
                 },
                 validator: (p0) {
                   if (p0!.isEmpty) {
-                    return "Please enter address";
+                    return addressValidatorStr;
                   } return null;
                 },
               ),
               CustomTextformfield(
-                labelText: "Contact Number",
+                labelText: contactStr,
                 onChanged: (p0) {
                   contactNumber=p0;
                 },
                 validator: (p0) {
                   if(p0!.isEmpty){
-                    return "Please enter contact number";
+                    return contactValidatorStr;
                   } return null;
                 },
               ),
               CustomTextformfield(
-                labelText: "Password",
+                labelText: passwordStr,
                 onChanged: (p0) {
                   password=p0;
                 },
                 validator: (p0) {
                   if (p0!.isEmpty) {
-                    return "Please enter password";
+                    return passwordValidatorStr;
                   } return null;
                 },
               ),
