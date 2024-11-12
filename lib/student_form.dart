@@ -14,9 +14,9 @@ class StudentForm extends StatefulWidget {
 
 class _StudentFormState extends State<StudentForm> {
   final _formKey = GlobalKey<FormState>();
-  TextEditingController? nameController = TextEditingController();
-  TextEditingController? addressController = TextEditingController();
-  TextEditingController? passwordController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController addressController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,9 +62,9 @@ class _StudentFormState extends State<StudentForm> {
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   // If the form is valid, print the values
-                  print("Name is ${nameController!.text}");
-                  print("Address is ${addressController!.text}");
-                  print("Password is ${passwordController!.text}");
+                  // print("Name is ${nameController.text}");
+                  // print("Address is ${addressController.text}");
+                  // print("Password is ${passwordController.text}");
                 }
               },
               child: Text(submitStr),

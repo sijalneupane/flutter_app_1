@@ -4,16 +4,17 @@ import 'package:flutter_app_1/util/string_const1.dart';
 
 class CustomElevatedbutton1 extends StatelessWidget {
   Widget? child;
+  double? height,width;
   void Function()? onPressed;
-  CustomElevatedbutton1({super.key,this.child,this.onPressed});
+  CustomElevatedbutton1({super.key,required this.child,required this.onPressed,this.height,this.width});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 20.0),
       child: SizedBox(
-        height: 50,
-        width: MediaQuery.of(context).size.width * 0.9,
+        height: height ?? 50,
+        width: width ?? MediaQuery.of(context).size.width * 0.9,
         child: ElevatedButton(
           onPressed: onPressed,
           child:child,
