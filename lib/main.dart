@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_1/buttom_nav.dart';
 import 'package:flutter_app_1/facebook.dart';
 import 'package:flutter_app_1/futsal.dart';
 import 'package:flutter_app_1/like.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
+          // scaffoldBackgroundColor: Colors.white,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
           useMaterial3: true,
         ),
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
         // home: Login1(),
         // home: Login2(),
         // home:Like(),
-        home: StudentForm(),
+        // home: StudentForm(),
+        home: ButtomNav(),
         );
   }
 }
