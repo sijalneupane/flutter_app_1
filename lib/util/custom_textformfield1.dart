@@ -4,7 +4,9 @@ class CustomTextformfield1 extends StatelessWidget {
   String? labelText;
   TextEditingController? controller;
   String? Function(String?)? validator;
-  CustomTextformfield1({super.key,this.labelText,this.controller,this.validator});
+  Widget? prefixIcon,suffixIcon;
+  bool? obscureText;
+  CustomTextformfield1({super.key,this.labelText,this.controller,this.validator,this.prefixIcon,this.suffixIcon,this.obscureText});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +16,12 @@ class CustomTextformfield1 extends StatelessWidget {
         autovalidateMode:AutovalidateMode.onUserInteraction,
         controller:controller,
         validator:validator,
+        obscureText:obscureText ?? false,
         decoration: InputDecoration(
+          
           labelText:labelText ,
+          prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
           border:OutlineInputBorder(
             borderRadius: BorderRadius.circular(8)
           )

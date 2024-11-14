@@ -4,6 +4,7 @@ import 'package:flutter_app_1/util/colors_const1.dart';
 import 'package:flutter_app_1/util/custom_elevatedbutton1.dart';
 import 'package:flutter_app_1/util/custom_textformfield1.dart';
 import 'package:flutter_app_1/util/string_const1.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class StudentForm extends StatefulWidget {
   const StudentForm({super.key});
@@ -17,6 +18,7 @@ class _StudentFormState extends State<StudentForm> {
   TextEditingController nameController = TextEditingController();
   TextEditingController addressController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  bool visible = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +31,7 @@ class _StudentFormState extends State<StudentForm> {
         child: Column(
           children: [
             CustomTextformfield1(
+              prefixIcon: Icon(Icons.person),
               labelText: nameStr,
               controller: nameController,
               validator: (p0) {
@@ -39,6 +42,7 @@ class _StudentFormState extends State<StudentForm> {
               },
             ),
             CustomTextformfield1(
+              prefixIcon: Icon(FontAwesomeIcons.locationDot),
               labelText: addressStr,
               controller: addressController,
               validator: (p0) {
@@ -51,6 +55,16 @@ class _StudentFormState extends State<StudentForm> {
             CustomTextformfield1(
               labelText: passwordStr,
               controller: passwordController,
+              prefixIcon: Icon(Icons.lock),
+              suffixIcon: IconButton(
+                  onPressed: () {
+                    setState(() {
+                    visible=!visible;  
+                    });
+                    
+                  },
+                  icon: Icon(visible?Icons.visibility:Icons.visibility_off)),
+              obscureText: visible ? false : true,
               validator: (p0) {
                 if (p0!.isEmpty) {
                   return passwordValidatorStr;

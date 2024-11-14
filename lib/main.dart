@@ -34,8 +34,8 @@ class MyApp extends StatelessWidget {
         // home: Login1(),
         // home: Login2(),
         // home:Like(),
-        // home: StudentForm(),
-        home: ButtomNav(),
+        home: StudentForm(),
+        // home: ButtomNav(),
         );
   }
 }
