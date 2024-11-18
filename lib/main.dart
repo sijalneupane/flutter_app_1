@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_1/buttom_nav.dart';
 import 'package:flutter_app_1/facebook.dart';
 import 'package:flutter_app_1/futsal.dart';
+import 'package:flutter_app_1/kumari_ui.dart';
 import 'package:flutter_app_1/like.dart';
 import 'package:flutter_app_1/login.dart';
 import 'package:flutter_app_1/login1.dart';
@@ -34,8 +35,9 @@ class MyApp extends StatelessWidget {
         // home: Login1(),
         // home: Login2(),
         // home:Like(),
-        home: StudentForm(),
+        // home: StudentForm(),
         // home: ButtomNav(),
+        home: KumariUi(),
         );
   }
 }
