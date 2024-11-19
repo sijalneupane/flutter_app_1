@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomServices extends StatelessWidget {
   String? service;
-  CustomServices({super.key,this.service});
+  String imagePath;
+  Color? color;
+  CustomServices({super.key,required this.service,required this.imagePath,this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -11,23 +13,27 @@ class CustomServices extends StatelessWidget {
         child:Column(
                     children: [
                       Container(
-                        height: 60,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image.asset(imagePath,fit: BoxFit.contain,),
+                        ),
+                        height: 55,
                         width: 50,
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 158, 53, 53),
+                          color:color,
                           shape: BoxShape.rectangle,
                           borderRadius: BorderRadius.circular(10)
                         ),
                       ),
                       SizedBox(height: 10,),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width*0.3,
+                        width: MediaQuery.of(context).size.width*0.2,
                         child: Text(service ?? '',
-                        softWrap: true,
-                        textAlign: TextAlign.center,
-                        // overflow: TextOverflow.visible,
-                        maxLines: 2,
-                        style: TextStyle(fontSize: 1),),
+                        // softWrap: true,
+                        overflow: TextOverflow.clip, // Ensures no truncation
+  textAlign: TextAlign.center,   
+                        style: TextStyle(fontSize: 12,height: 1.2),
+                        ),
                         ),
                     ],
                   ),
