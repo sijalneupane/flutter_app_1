@@ -11,6 +11,7 @@ import 'package:flutter_app_1/signup1.dart';
 import 'package:flutter_app_1/splash_screen.dart';
 import 'package:flutter_app_1/student_form.dart';
 import 'package:flutter_app_1/textform1.dart';
+import 'package:flutter_app_1/util/custom_container_2services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         // home:Like(),
         // home: StudentForm(),
         // home: ButtomNav(),
+        // home: CustomContainer2services(),
         home: KumariUi(),
         );
   }

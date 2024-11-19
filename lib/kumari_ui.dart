@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_1/color_const.dart';
 import 'package:flutter_app_1/util/custom_container.dart';
+import 'package:flutter_app_1/util/custom_container_2services.dart';
 import 'package:flutter_app_1/util/custom_icon.dart';
 
 class KumariUi extends StatefulWidget {
@@ -90,7 +92,7 @@ class _KumariUiState extends State<KumariUi> {
                     CustomContainer(
                       height: 110,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0, top: 10),
+                        padding: const EdgeInsets.only(left: 10.0, top: 10),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -114,9 +116,13 @@ class _KumariUiState extends State<KumariUi> {
                                         visible = !visible;
                                       });
                                     },
-                                    icon: Icon(visible
-                                        ? Icons.visibility_off
-                                        : Icons.visibility))
+                                    icon: Icon(
+                                      visible
+                                          ? Icons.visibility_off
+                                          : Icons.visibility,
+                                      color: primaryColor,
+                                      size: 20,
+                                    ))
                               ],
                             )
                           ],
@@ -132,21 +138,37 @@ class _KumariUiState extends State<KumariUi> {
                       service4: "Send Money",
                     ),
                     CustomContainer(
-                      serviceTitle: "Banking Services",
+                      serviceTitle: "Accounting Services",
                       service1: "Cash Deposit",
                       service2: "Cheque Deposits",
-                      service3: "",
-                      service4: "",
+                      service3: "FD Loan Enhancement",
+                      service4: "Loan Against FD",
                     ),
                     CustomContainer(
                       serviceTitle: "Banking Services",
-                      service1: "",
-                      service2: "",
-                      service3: "",
-                      service4: "",
+                      service1: "FD request",
+                      service2: "FD plus",
+                      service3: "Recurring Fixed Deposit",
+                      service4: "Balance Certificate",
                     ),
-                    // CustomContainer(),
-                    // CustomContainer(),
+                    CustomContainer2services(
+                      serviceTitle: "FundTransfer",
+                      service1: "Same Bank",
+                      service2: "Other Bank",
+                    ),
+                    CustomContainer(
+                      serviceTitle: "Payments",
+                      service1: "credit Card",
+                      service2: "Mobile Topup",
+                      service3: "Tansen Khanepani",
+                      service4: "Wallet",
+                    ),
+                    CustomContainer2services(
+                      serviceTitle: "Remitance",
+                      service1: "credit Card",
+                      service2: "Mobile Topup",
+                    )
+                    // CustomContainer(service1: "Same Bank",),
                   ],
                 ),
               ),

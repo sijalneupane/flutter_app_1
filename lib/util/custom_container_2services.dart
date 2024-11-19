@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_1/util/custom_services.dart';
 
-class CustomContainer extends StatelessWidget {
-  Color? color;
+class CustomContainer2services extends StatelessWidget {
+   Color? color;
   double? width, height;
   Decoration? decoration;
   Widget? child;
   String? serviceTitle,service1,service2,service3,service4;
-
-  CustomContainer(
-      {super.key,
+   CustomContainer2services({super.key,
       this.color,
       this.decoration,
       this.height,
@@ -19,12 +17,13 @@ class CustomContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: Container(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 0),
           child: child ??Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
@@ -35,14 +34,10 @@ class CustomContainer extends StatelessWidget {
                 ],
               ),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   CustomServices(service: service1,),
-                  CustomServices(service: service2,),
-                  CustomServices(service: service3,),
-                  CustomServices(service: service4,),
-                ],
+                  CustomServices(service: service2,),]
               )
             ],
           ),
