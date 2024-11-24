@@ -8,6 +8,7 @@ import 'package:flutter_app_1/login.dart';
 import 'package:flutter_app_1/login1.dart';
 import 'package:flutter_app_1/login2.dart';
 import 'package:flutter_app_1/qr_generator.dart';
+import 'package:flutter_app_1/qr_toogle.dart';
 import 'package:flutter_app_1/send_money.dart';
 import 'package:flutter_app_1/signup1.dart';
 import 'package:flutter_app_1/splash_screen.dart';
@@ -47,7 +48,8 @@ class MyApp extends StatelessWidget {
         // home: KumariBottomNavbar(),
         // home: KumariQr(),
         // home: SendMoneyPage(),
-        home: QrGenerator(),
+        // home: QrGenerator(),
+        home: QrToogle(),
         );
   }
 }
