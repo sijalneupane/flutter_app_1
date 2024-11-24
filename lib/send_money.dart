@@ -28,7 +28,7 @@ class SendMoneyPage extends StatelessWidget {
                     const Text('Send Money',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.white),),
                     Spacer(),
                     IconButton(
-            icon: const Icon(Icons.history,color: Colors.white,),
+            icon: const Icon(Icons.work_history_outlined,color: Colors.white,),
             onPressed: () {},
           ),
                   ],
@@ -84,18 +84,6 @@ class SendMoneyPage extends StatelessWidget {
             ),
           ),
         ]),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-       
-        currentIndex: 2,
-        onTap: (index) {},
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.payments), label: 'Payments'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.send), label: 'Send Money'),
-          BottomNavigationBarItem(icon: Icon(Icons.more_horiz), label: 'More'),
-        ],
       ),
     );
   }
