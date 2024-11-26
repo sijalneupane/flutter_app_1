@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app_1/myqr_generator1.dart';
 import 'package:flutter_app_1/myqr_scanner1.dart';
@@ -10,7 +12,9 @@ class QrToogle extends StatefulWidget {
 }
 
 class _QrToogleState extends State<QrToogle> {
-  int selectedIndex = 0;
+  PageController controller = PageController();
+  // int selectedIndex = 0;
+  List<bool> isSelected = [true, false];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,44 +44,79 @@ class _QrToogleState extends State<QrToogle> {
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height*0.02,),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.02,
+                  ),
                   ToggleButtons(
                     constraints: BoxConstraints(
                       minWidth: MediaQuery.of(context).size.width *
                           0.44, // Width of each button
                       // minHeight: MediaQuery.of(context).size.width, // Height of each button
                     ),
-                    color: Colors.white,
+                    color: Colors.white, //unselected text color
                     // disabledBorderColor:Colors.blue ,
-                    borderColor: Colors.blue,
-                    fillColor: const Color.fromARGB(255, 255, 255, 255),
+                    borderColor: const Color.fromARGB(255, 4, 77, 187), //
+                    fillColor: const Color.fromARGB(
+                        255, 255, 255, 255), //this is the selected buttoncolor
                     borderWidth: 2,
                     selectedBorderColor: Colors.blue,
-                    selectedColor: Colors.blue.shade800,
+                    selectedColor: Colors.blue.shade800, //selected text color
                     borderRadius: BorderRadius.circular(10),
-                    isSelected: [selectedIndex == 0, selectedIndex == 1],
+                    // isSelected: [selectedIndex == 0, selectedIndex == 1],
+                    isSelected: isSelected,
                     onPressed: (int index) {
                       setState(() {
-                        selectedIndex = index;
+                        isSelected[0] = !isSelected[0];
+                        isSelected[1] = !isSelected[1];
+                        if (index == 1) {
+                          controller.nextPage(
+                              duration: Duration(milliseconds: 200),
+                              curve: Curves.easeInOut);
+                        } else {
+                          controller.previousPage(
+                              duration: Duration(milliseconds: 200),
+                              curve: Curves.easeInOut);
+                        }
                       });
                     },
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 10),
                         child: Text('Scan', style: TextStyle(fontSize: 18)),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 10),
                         child: Text('Share', style: TextStyle(fontSize: 18)),
                       ),
                     ],
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height*0.03,),
-                  Expanded(child:Container(
-                    
-                    width: MediaQuery.of(context).size.width,
-                    child:  selectedIndex==0? MyqrScanner1():MyqrGenerator1(),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  Expanded(
+                      child: PageView(
+                        onPageChanged: (index) {
+                        setState(() {
+                          if (index==0) {
+                            isSelected[0]=true;
+                            isSelected[1]=false;
+
+                          }else{
+                            isSelected[0]=false;
+                            isSelected[1]=true;
+                          }
+                        });
+                        },
+                    controller: controller,
+                    children: [MyqrScanner1(), MyqrGenerator1()],
                   ))
+
+                  // Expanded(child:SizedBox(
+                  //   width: MediaQuery.of(context).size.width,
+                  //   child:  isSelected[0]? MyqrScanner1():MyqrGenerator1(),
+                  // ))
                 ],
               ),
             )),
