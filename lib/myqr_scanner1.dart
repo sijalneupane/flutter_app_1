@@ -16,22 +16,29 @@ class MyqrScanner1 extends StatelessWidget {
           scanLineColor: Colors.green.shade400,
           onCapture: (data) {
             // print(data);
-            controller.resume();
 
             var snackBar = SnackBar(
+              behavior: SnackBarBehavior.floating,
+              // padding: EdgeInsets.only(bottom: 20,right: 20),
               content: Text(data),
+              duration: Duration(milliseconds: 5000),
+              clipBehavior: Clip.antiAlias,
             );
-
-// Find the ScaffoldMessenger in the widget tree
-// and use it to show a SnackBar.
+              // Find the ScaffoldMessenger in the widget tree and use it to show a SnackBar.
             ScaffoldMessenger.of(context).showSnackBar(snackBar);
             // do something
+            controller.resume();
           },
         ),
         Positioned(
             right: 0,
             top: 50,
-            child: IconButton(onPressed: () {}, icon: Icon(Icons.image,color: Colors.white,))),
+            child: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.image,
+                  color: Colors.white,
+                ))),
         Positioned(
             right: 0,
             left: 0,

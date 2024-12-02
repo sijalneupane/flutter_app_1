@@ -66,8 +66,13 @@ class _QrToogleState extends State<QrToogle> {
                     isSelected: isSelected,
                     onPressed: (int index) {
                       setState(() {
-                        isSelected[0] = !isSelected[0];
-                        isSelected[1] = !isSelected[1];
+                        if(index==0){
+                          isSelected[0] = true;
+                        isSelected[1] = false;
+                        }else{
+                           isSelected[0] = false;
+                        isSelected[1] = true;
+                        }
                         if (index == 1) {
                           controller.nextPage(
                               duration: Duration(milliseconds: 200),
