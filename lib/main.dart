@@ -8,8 +8,10 @@ import 'package:flutter_app_1/like.dart';
 import 'package:flutter_app_1/login.dart';
 import 'package:flutter_app_1/login1.dart';
 import 'package:flutter_app_1/login2.dart';
+import 'package:flutter_app_1/products.dart';
 import 'package:flutter_app_1/qr_generator.dart';
 import 'package:flutter_app_1/qr_toogle.dart';
+import 'package:flutter_app_1/recipes.dart';
 import 'package:flutter_app_1/send_money.dart';
 import 'package:flutter_app_1/signup1.dart';
 import 'package:flutter_app_1/splash_screen.dart';
@@ -51,7 +53,9 @@ class MyApp extends StatelessWidget {
         // home: SendMoneyPage(),
         // home: QrGenerator(),
         // home: QrToogle(),
-        home: Finger1(),
+        // home: Finger1(),
+        // home: Products(),
+        home: Recipes(),
         );
   }
 }
